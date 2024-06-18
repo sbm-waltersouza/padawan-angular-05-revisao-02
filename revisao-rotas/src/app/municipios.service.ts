@@ -14,4 +14,3 @@ export class MunicipiosService {
     return this.http.get<any>(`${this.apiUrl}/${uf}/municipios`);
   }
 }
-  

@@ -1,0 +1,15 @@
+<div>
+  <label for="uf">Escolha uma Unidade Federativa:</label>
+  <select id="uf" [(ngModel)]="uf" (change)="getMunicipios()">
+    <option value="SP">São Paulo</option>
+    <option value="RJ">Rio de Janeiro</option>
+    <option value="BA">Bahia</option>
+    <option value="GO">Goiás</option>
+    <!-- Adicione outras opções conforme necessário -->
+  </select>
+</div>
+
+<h1>Municípios do Estado de {{ uf }}</h1>
+<ul>
+  <li *ngFor="let municipio of municipios">{{ municipio.nome }}</li>
+</ul>
